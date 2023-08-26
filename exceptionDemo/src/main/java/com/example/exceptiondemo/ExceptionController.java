@@ -9,4 +9,9 @@ public class ExceptionController {
     public String ping() {
         return "pong";
     }
+
+    @GetMapping("/exception")
+    public void error() {
+        throw new RuntimeException("에러 입니다.");
+    }
 }
